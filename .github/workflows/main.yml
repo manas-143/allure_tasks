@@ -23,7 +23,7 @@ jobs:
         python -m pip install python-dotenv
      - name: Run tests
        run: |
-         python runner_behave.py
+        ./Amazon_POM python runner_behave.py
      - name: Get Allure history
        uses: actions/checkout@v3
        if: always()
