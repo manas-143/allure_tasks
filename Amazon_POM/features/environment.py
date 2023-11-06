@@ -4,7 +4,7 @@ start = sync_playwright().start()
 
 
 def before_scenario(context, scenario):
-    browser = start.firefox.launch(headless=False, slow_mo=3000)
+    browser = start.firefox.launch(headless=True, slow_mo=3000)
     context.tab = browser.new_context()
     context.page = context.tab.new_page()
 
