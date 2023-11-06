@@ -43,17 +43,17 @@ jobs:
          gh_pages: main
          allure_report: allure-report
          allure_history: allure-history
- 
+
      - name: Deploy report to Github Pages
        if: always()
-       uses: peaceiris/actions-main@v2
+       uses: peaceiris/actions-gh-pages@v2
        env:
          PERSONAL_TOKEN: ${{ secrets.PRSONAL1 }}
          PUBLISH_BRANCH: main
          PUBLISH_DIR: allure-history
-     # - name: Build Status
-     #   run: |
-     #     if [ -f rerun_failing.features ]; then
-     #       echo "Build Failed due to test failure."
-     #       exit 1
-     #     fi
+     - name: Build Status
+       run: |
+         if [ -f rerun_failing.features ]; then
+           echo "Build Failed due to test failure."
+           exit 1
+         fi
