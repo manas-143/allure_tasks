@@ -22,15 +22,15 @@ def main():
     #
     # stop_fail = "--stop" if is_truthy(os.getenv("STOP_FAIL")) else ""
     # log.info(f'Stop at first fail?: {get_from_env("STOP_FAIL")}')
-    reports = "C://Users//a98016118//Desktop//amazon//Amazon_POM" + "/" + os.getenv(
+    reports = "./Amazon_POM" + "/" + os.getenv(
         "REPORTS_FOLDER")
     reports = os.path.normpath(f'"{reports}"')
     feature_order = '" "'.join(
-        os.path.join("C://Users//a98016118//Desktop//amazon//Amazon_POM",
+        os.path.join("./Amazon_POM",
                      feature_path.strip())
         for feature_path in os.getenv("FEATURE_ORDER").split(",")
         if Path(
-            "C://Users//a98016118//Desktop//amazon//Amazon_POM" + "/" + feature_path.strip()).exists()
+            "./Amazon_POM" + "/" + feature_path.strip()).exists()
     )
     feature_order = os.path.normpath(f'"{feature_order}"')
     print(feature_order)
