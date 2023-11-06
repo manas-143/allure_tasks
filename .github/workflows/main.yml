@@ -22,8 +22,10 @@ jobs:
         python -m pip install allure-behave
         python -m pip install python-dotenv
      - name: Run tests
+       working-directory: Amazon_POM  # Set the working directory to Amazon_POM
        run: |
-        ./Amazon_POM python runner_behave.py
+           python runner_behave.py  # Run the script in the specified directory
+
      - name: Get Allure history
        uses: actions/checkout@v3
        if: always()
