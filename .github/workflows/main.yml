@@ -27,7 +27,7 @@ jobs:
            python runner_behave.py  # Run the script in the specified directory
 
      - name: Get Allure history
-       uses: actions/checkout@v3
+       uses: actions/checkout@v3 
        if: always()
        continue-on-error: true
        with:
