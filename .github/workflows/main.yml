@@ -46,7 +46,7 @@ jobs:
  
      - name: Deploy report to Github Pages
        if: always()
-       uses: peaceiris/actions-gmain@v2
+       uses: peaceiris/actions-main@v2
        env:
          PERSONAL_TOKEN: ${{ secrets.PRSONAL1 }}
          PUBLISH_BRANCH: main
