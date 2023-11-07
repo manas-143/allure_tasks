@@ -1,13 +1,30 @@
 from playwright.sync_api import sync_playwright
+import os
 
-start = sync_playwright().start()
+
+def before_all(context):
+    context.p = sync_playwright().start()
+
+    path = './videos'
+    parent_directory = './'
+
+    is_exist = os.path.exists(path)
+    if is_exist == False:
+        path = os.path.join(parent_directory, "videos")
+        os.mkdir(path)
 
 
 def before_scenario(context, scenario):
-    browser = start.firefox.launch(headless=True, slow_mo=3000)
-    context.tab = browser.new_context()
+    context.browser = context.p.chromium.launch(headless=False, slow_mo=5000)
+    context.tab = context.browser.new_context(
+        record_video_dir="videos/",
+        record_video_size={"width": 1500, "height": 1200}
+    )
     context.page = context.tab.new_page()
 
 
 def after_scenario(context, scenario):
     context.page.close()
+    context.page.video.save_as(
+        f"./videos/{scenario.name}.webm"
+    )
