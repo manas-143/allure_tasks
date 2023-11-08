@@ -26,6 +26,7 @@ jobs:
         python -m pip install allure-behave
         python -m pip install python-dotenv
      - name: Run tests
+       if: github.event.schedule == '10 15 * * *'
        run: |
          python runner_behave.py
      - name: Get Allure history
