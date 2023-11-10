@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Nov 08 07:05:32 GMT 2023","Wed Nov 08 07:06:11 GMT 2023","38387","","","","","","Fetch company details and save to CSV -- @1.1 ",""
