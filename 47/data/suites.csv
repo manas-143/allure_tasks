@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"skipped","Thu Nov 16 15:43:09 GMT 2023","Thu Nov 16 15:43:09 GMT 2023","210","","","","","","Search for laptops,add to cart and verify the total price -- @1.1 ",""
+"skipped","Thu Nov 16 15:43:09 GMT 2023","Thu Nov 16 15:43:09 GMT 2023","124","","","","","","Search for laptops,add to cart and verify the total price -- @1.3 ",""
+"passed","Wed Nov 08 07:05:32 GMT 2023","Wed Nov 08 07:06:11 GMT 2023","38387","","","","","","Fetch company details and save to CSV -- @1.1 ",""
+"skipped","Thu Nov 16 15:43:09 GMT 2023","Thu Nov 16 15:43:09 GMT 2023","128","","","","","","Search for laptops,add to cart and verify the total price -- @1.2 ",""
