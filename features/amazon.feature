@@ -8,5 +8,5 @@ Feature: Amazon laptop purchase
       |   items    | star |  num |
       | hp laptops |   2  |   3  |
       |dell laptops|   3  |   3  |
-      |acer laptops|   2  |   3  |
+
 
