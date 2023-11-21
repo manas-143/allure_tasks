@@ -6,8 +6,8 @@
     Examples:
       |   places      | num   |
       | Restaurant    |  35   |
-#      | Hotels        |  10   |
-#      | temples       |  15   |
+      | Hotels        |  10   |
+      | temples       |  15   |
 
 
 
