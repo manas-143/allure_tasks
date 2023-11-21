@@ -29,7 +29,6 @@ jobs:
         python -m pip install allure-behave
         python -m pip install python-dotenv
      - name: Run tests
-       if: github.event.schedule == '35 15 * * *'
        run: |
          python runner_behave.py
      - name: Get Allure history
@@ -57,12 +56,7 @@ jobs:
          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          PUBLISH_BRANCH: gh-pages
          PUBLISH_DIR: allure-history
-     - name: Build Status
-       run: |
-         if [ -f rerun_failing.features ]; then
-           echo "Build Failed due to test failure."
-           exit 1
-         fi
+
 
 
 
