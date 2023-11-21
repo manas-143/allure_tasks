@@ -4,7 +4,6 @@ from dotenv import load_dotenv
 from behave.__main__ import run_behave
 from behave.configuration import Configuration
 
-# PROJECT_ROOT = "C://Users//a98016118//Desktop//amazon//Amazon_POM"
 PROJECT_ROOT = os.getcwd()
 
 
