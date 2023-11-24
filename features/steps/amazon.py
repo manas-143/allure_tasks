@@ -2,16 +2,18 @@ from behave import given, when, then
 from Ui_functions import send_input, click
 from Amazon_functions import select_items_extract_prices, total_cart_prices
 
+
 """......................all the locators......................"""
 
 locators = {
     "SEARCH BOX": "xpath=//input[@type='text']",
     "RATING": "xpath =//section[@aria-label='{} Stars & Up']",
-    "ITEMS LIST": "xpath=//span[@class='a-size-medium a-color-base a-text-normal']",
-    "ADD TO CART BTN": "xpath=//input[@id='add-to-cart-button' and @title='Add to Shopping Cart']",
+    "ITEMS LIST": "xpath=//a[@class='a-link-normal s-no-outline']",
+    "ADD TO CART BTN": "xpath=//div[@id='twisterPlusPriceSubtotalWWDesktop_feature_div']/following-sibling::div[@id='twisterPlusPriceSubtotalWWDesktop_feature_div']/following-sibling::div[@id='addToCart_feature_div']",
     "CART ICON": "xpath=//*[@class='nav-cart-icon nav-sprite']",
     "TOTAL CART PRICE": "xpath=//*[@id='sc-subtotal-amount-buybox']/span",
-    "ITEM PRICE": "xpath=//span[@id='tp_price_block_total_price_ww']/descendant::span[@class='a-price-whole']"
+    "ITEM PRICE": "xpath=//span[@id='tp_price_block_total_price_ww']/descendant::span[@class='a-price-whole']",
+    "CLOSE BTN" :"xpath=(//div[@id='attach-added-to-cart-message']/following-sibling::a[@aria-label='Exit this panel and return to the product page. '])[1]"
 }
 """.............................................................."""
 
@@ -33,7 +35,7 @@ def filtering_the_items(context, star):
 @when(u'add top "{num}" laptops to the cart')
 def adding_multiple_items(context, num):
     context.amount = []  # to store the price of each item
-    x = select_items_extract_prices(context.page, locators["ITEMS LIST"], locators["ITEM PRICE"],locators["ADD TO CART BTN"], num)
+    x = select_items_extract_prices(context.page, locators["ITEMS LIST"], locators["ITEM PRICE"],locators["ADD TO CART BTN"], num, locators["CLOSE BTN"])
     context.amount = x
 
 
