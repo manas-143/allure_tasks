@@ -23,15 +23,17 @@ def before_all(context):
 
 
 def before_scenario(context, scenario):
-    context.browser = context.p.chromium.launch(headless=True, slow_mo=5000)
+    context.browser = context.p.chromium.launch(headless=False, slow_mo=5000)
     context.tab = context.browser.new_context(
         record_video_dir="Video/",
         record_video_size={"width": 1500, "height": 1200}
     )
     context.page = context.tab.new_page()
+    context.tab.tracing.start(screenshots=True, snapshots=True, sources=True)
 
 
 def after_scenario(context, scenario):
+    scenario_name = (scenario.name.lower().replace(' ', '_'))
     context.page.close()
     context.page.video.save_as(
         f"{current_directory}/Video/{scenario.name}.webm"
@@ -46,3 +48,4 @@ def after_scenario(context, scenario):
             name=f"Video : {scenario.name}",
             attachment_type=AttachmentType.WEBM,
         )
+    context.tab.tracing.stop(path=f"{scenario_name}_trace.zip")
