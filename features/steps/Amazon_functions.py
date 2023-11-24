@@ -8,6 +8,7 @@ def select_items_extract_prices(page, item_list_selector, price_selector, cart_b
     links = []
     for i in range(int(number)):
         page_link = "https://www.amazon.in/"+all_items.nth(i).get_attribute("href")
+        print(page_link)
         links.append(page_link)
 
     for link in links:
