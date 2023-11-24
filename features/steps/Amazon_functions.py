@@ -2,18 +2,20 @@ from Ui_functions import send_input, click
 
 
 def select_items_extract_prices(page, item_list_selector, price_selector, cart_btn_selector,
-                                number):  # function for item's price extract
+                                number, close_btn):  # function for item's price extract
     all_items = page.locator(item_list_selector)
     amount = []
-
+    links = []
     for i in range(int(number)):
-        with page.expect_popup() as page1_info:
-            all_items.nth(i).click()  # click on each laptop
-        page1 = page1_info.value  # going to the next tab
-        amt = page1.locator(price_selector).inner_text()  # locator for amount
+        page_link = "https://www.amazon.in/"+all_items.nth(i).get_attribute("href")
+        links.append(page_link)
+
+    for link in links:
+        page.goto(link)
+        amt = page.locator(price_selector).inner_text()  # locator for amount
         amount.append(float(amt.replace(",", "")))  # storing each laptop value in float
-        page1.locator(cart_btn_selector).click()  # adding the laptop to cart
-        page1.close()  # closing the new tab
+        page.locator(cart_btn_selector).click()  # adding the laptop to cart
+        page.locator(close_btn).click()
     return amount  # returning the amount to base page
 
 
