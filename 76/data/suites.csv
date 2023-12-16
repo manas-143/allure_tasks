@@ -1,3 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"broken","Sun Nov 26 15:41:48 GMT 2023","Sun Nov 26 15:42:48 GMT 2023","59868","","","","","","Search for laptops,add to cart and verify the total price -- @1.1 ",""
-"broken","Sun Nov 26 15:42:48 GMT 2023","Sun Nov 26 15:43:47 GMT 2023","59900","","","","","","Search for laptops,add to cart and verify the total price -- @1.2 ",""
