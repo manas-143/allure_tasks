@@ -11,7 +11,7 @@ def extracting_information_of_company(page, name_selector, rating_selector, revi
     try:
         company_details_dict['Name'] = get_text(page, name_selector)
     except:
-        company_details_dict['Company_Name'] = None
+        company_details_dict['Name'] = None
     try:
         company_details_dict['Rating'] = get_text(page, rating_selector)
     except:
