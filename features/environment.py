@@ -5,7 +5,7 @@ from allure_commons.types import AttachmentType
 from playwright.sync_api import sync_playwright
 import os
 
-current_directory = os.getcwd()
+current_directory =os.path.abspath(os.path.join(os.getcwd(), os.pardir))
 
 
 def before_all(context):
