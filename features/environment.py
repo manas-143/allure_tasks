@@ -11,19 +11,24 @@ current_directory = os.getcwd()
 def before_all(context):
     context.p = sync_playwright().start()
 
-    Path = f'{current_directory}\Video'
+    Path = f'{current_directory}\\Video'
     print(Path)
-
+    Path1 = f'{current_directory}\\Traces'
     is_exist = os.path.exists(Path)
+    exists = os.path.exists(Path1)
     print(is_exist)
     if is_exist:
         shutil.rmtree(Path)
-    Path = f'{current_directory}\Video'
+    Path = f'{current_directory}\\Video'
     os.mkdir(Path)
+    if exists:
+        shutil.rmtree(Path1)
+    Path1 = f'{current_directory}\\Traces'
+    os.mkdir(Path1)
 
 
 def before_scenario(context, scenario):
-    context.browser = context.p.chromium.launch(headless=True, slow_mo=5000)
+    context.browser = context.p.chromium.launch(headless=False, slow_mo=5000)
     context.tab = context.browser.new_context(
         record_video_dir="Video/",
         record_video_size={"width": 1500, "height": 1200}
@@ -34,6 +39,7 @@ def before_scenario(context, scenario):
 
 def after_scenario(context, scenario):
     scenario_name = (scenario.name.lower().replace(' ', '_'))
+    context.tab.tracing.stop(path=current_directory +f"\\Traces\\{scenario_name}trace.zip")
     context.page.close()
     context.page.video.save_as(
         f"{current_directory}/Video/{scenario.name}.webm"
@@ -48,4 +54,8 @@ def after_scenario(context, scenario):
             name=f"Video : {scenario.name}",
             attachment_type=AttachmentType.WEBM,
         )
-    context.tab.tracing.stop(path=f"{scenario_name}_trace.zip")
+    attach.file(current_directory +f"\\Traces\f{scenario_name}trace.zip", name="Trace viewer logs", extension=".zip")
+
+    context.tab.close()
+    context.browser.close()
+
