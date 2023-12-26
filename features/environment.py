@@ -39,7 +39,7 @@ def before_scenario(context, scenario):
 
 def after_scenario(context, scenario):
     scenario_name = (scenario.name.lower().replace(' ', '_'))
-    context.tab.tracing.stop(path=current_directory +f"\\Traces\\{scenario_name}trace.zip")
+    context.tab.tracing.stop(path=current_directory +f"\\Traces\\trace.zip")
     context.page.close()
     context.page.video.save_as(
         f"{current_directory}/Video/{scenario.name}.webm"
@@ -54,7 +54,7 @@ def after_scenario(context, scenario):
             name=f"Video : {scenario.name}",
             attachment_type=AttachmentType.WEBM,
         )
-    attach.file(current_directory +f"\\Traces\f{scenario_name}trace.zip", name="Trace viewer logs", extension=".zip")
+    attach.file(current_directory +f"\\Traces\trace.zip", name="Trace viewer logs", extension=".zip")
 
     context.tab.close()
     context.browser.close()
