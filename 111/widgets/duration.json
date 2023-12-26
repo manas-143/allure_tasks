@@ -1,0 +1,1 @@
+[{"uid":"5b1752a4f51aab7b","name":"Fetch company details and save to CSV -- @1.2 ","time":{"start":1703573608959,"stop":1703573639184,"duration":30225},"status":"passed","severity":"normal"},{"uid":"1ce96067d3188226","name":"Fetch company details and save to CSV -- @1.1 ","time":{"start":1703573576703,"stop":1703573608959,"duration":32256},"status":"passed","severity":"normal"}]
