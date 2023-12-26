@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Tue Dec 26 06:42:30 GMT 2023","Tue Dec 26 06:44:25 GMT 2023","115165","","","","","","Fetch company details and save to CSV -- @1.2 ",""
+"passed","Tue Dec 26 06:41:59 GMT 2023","Tue Dec 26 06:42:30 GMT 2023","30439","","","","","","Fetch company details and save to CSV -- @1.1 ",""
+"broken","Tue Dec 26 06:44:25 GMT 2023","Tue Dec 26 06:44:55 GMT 2023","30055","","","","","","Fetch company details and save to CSV -- @1.3 ",""
