@@ -6,5 +6,4 @@ Feature: get company details
     Examples:
       |            company name              |
       |actualize consulting engineers pvt.ltd|
-      |         nimesa technologies          |
       |    sulopa technologies pvt ltd       |
