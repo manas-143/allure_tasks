@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Jan 23 15:45:04 GMT 2024","Tue Jan 23 15:45:34 GMT 2024","29826","","","","","","Fetch company details and save to CSV -- @1.2 ",""
+"passed","Tue Jan 23 15:44:34 GMT 2024","Tue Jan 23 15:45:04 GMT 2024","29728","","","","","","Fetch company details and save to CSV -- @1.1 ",""
+"passed","Tue Jan 23 15:43:03 GMT 2024","Tue Jan 23 15:44:34 GMT 2024","91515","","","","","","Search for laptops,add to cart and verify the total price -- @1.2 ",""
+"passed","Tue Jan 23 15:41:30 GMT 2024","Tue Jan 23 15:43:03 GMT 2024","92305","","","","","","Search for laptops,add to cart and verify the total price -- @1.1 ",""
