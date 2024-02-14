@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Wed Feb 14 15:41:56 GMT 2024","Wed Feb 14 15:42:56 GMT 2024","60466","","","","","","Search for laptops,add to cart and verify the total price -- @1.1 ",""
+"broken","Wed Feb 14 15:44:56 GMT 2024","Wed Feb 14 15:45:15 GMT 2024","18718","","","","","","Search for top 20 places -- @1.1 ",""
+"passed","Wed Feb 14 15:44:26 GMT 2024","Wed Feb 14 15:44:56 GMT 2024","29563","","","","","","Fetch company details and save to CSV -- @1.2 ",""
+"broken","Wed Feb 14 15:45:33 GMT 2024","Wed Feb 14 15:45:52 GMT 2024","18829","","","","","","Search for top 20 places -- @1.3 ",""
+"broken","Wed Feb 14 15:42:56 GMT 2024","Wed Feb 14 15:43:57 GMT 2024","60313","","","","","","Search for laptops,add to cart and verify the total price -- @1.2 ",""
+"passed","Wed Feb 14 15:43:57 GMT 2024","Wed Feb 14 15:44:26 GMT 2024","29705","","","","","","Fetch company details and save to CSV -- @1.1 ",""
+"broken","Wed Feb 14 15:45:15 GMT 2024","Wed Feb 14 15:45:33 GMT 2024","18652","","","","","","Search for top 20 places -- @1.2 ",""
